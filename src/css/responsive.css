@@ -1,0 +1,12 @@
+@media(max-width: 500px){
+    .container{
+        max-width: 350px;
+       
+    }
+    .container img{
+        width: 70%;
+    }
+    .container h1 {
+       font-size: 18px;
+      }
+}
