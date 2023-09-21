@@ -16,6 +16,7 @@ body {
   max-height: 600px;
   border-radius: 20px;
   box-shadow: 3px 2px 10px 5px rgba(0, 0, 0, 0.29);
+  position: relative;
 }
 .container img {
   width: 50%;
@@ -30,7 +31,9 @@ body {
   font-size: 20px;
   letter-spacing: 2px;
   font-weight: 600;
+  margin-bottom: 5px;
 }
+
 .btn {
   margin-top: 50px;
   padding: 15px;
@@ -44,6 +47,22 @@ body {
   color: #fff;
 }
 .btn:hover {
-  background-color:rgba(40, 40, 40, 0.7); ;
-  
+  background-color: rgba(40, 40, 40, 0.7);
+}
+
+.borda-animada {
+  animation: slidein 1s linear forwards;
+  border-bottom: 3px solid rgb(40, 40, 40);
+}
+
+@keyframes slidein {
+  from {
+    left: 30%;
+    width: 0%;
+  }
+
+  to {
+    left: 30%;
+    width: 40%;
+  }
 }

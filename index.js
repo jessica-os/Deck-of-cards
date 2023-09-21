@@ -1,5 +1,11 @@
+const borda = document.querySelector(".borda-animada");
 const botao = document.getElementById("btn").addEventListener("click", () => {
   tirarUmaCartaDoBaralho();
+
+  borda.style.animation = "none";
+  setTimeout(() => {
+    borda.style.animation = " slidein 1s linear forwards";
+  }, 1000);
 });
 
 async function criarBaralho() {
@@ -16,6 +22,7 @@ async function selecionarUmaCarta(deck_id) {
 async function tirarUmaCartaDoBaralho() {
   const baralho = await criarBaralho();
   const carta = await selecionarUmaCarta(baralho.deck_id);
+
   const imagemCarta = carta.cards[0].image;
   let valorCarta = carta.cards[0].value;
   let nipe = carta.cards[0].suit;
